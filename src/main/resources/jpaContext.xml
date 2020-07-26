@@ -13,7 +13,7 @@
 	<!-- configure application using annotations --> 
 	<context:annotation-config />
 	
-	<context:component-scan base-package="com.pluralsight" />
+	<context:component-scan base-package="com.spring.jpa" />
 	
 	<!-- configure spring to use persistent context annotation -->
 	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
