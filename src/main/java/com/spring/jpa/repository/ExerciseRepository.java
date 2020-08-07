@@ -1,9 +1,11 @@
 package com.spring.jpa.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import com.spring.jpa.model.Exercise;
 
-public interface ExerciseRepository {
+@Repository("exerciseRepository")
+public interface ExerciseRepository extends JpaRepository<Exercise, Long>{
 	
-	Exercise save(Exercise exercise);
-
 }

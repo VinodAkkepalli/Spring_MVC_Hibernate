@@ -19,7 +19,7 @@ import com.spring.jpa.model.GoalReport;
 import com.spring.jpa.service.GoalService;
 
 @Controller
-@SessionAttributes("goal")	//Add goal to our http session
+@SessionAttributes("goal")	//Add goal object to our http session
 public class GoalController {
 
 	@Autowired
@@ -28,6 +28,7 @@ public class GoalController {
 	@RequestMapping(value = "addGoal", method = RequestMethod.GET)
 	public String addGoal(Model model, HttpSession session) {
 		
+		//session attribute goal is obtained from session object 
 		Goal goal = (Goal) session.getAttribute("goal");
 		if(goal == null) {
 			goal = new Goal();
